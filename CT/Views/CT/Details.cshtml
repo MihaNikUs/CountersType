@@ -1,0 +1,98 @@
+﻿@model CT.Models.Counter_Types
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Counter_Types</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fase.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fase.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modct.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modct.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Types_On.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Types_On.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_PERIOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_PERIOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_LENGTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_LENGTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_PREC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_PREC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_ELEMENTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_ELEMENTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_VOLTAGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_VOLTAGE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_CURRENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_CURRENT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

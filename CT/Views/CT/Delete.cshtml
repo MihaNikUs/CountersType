@@ -1,0 +1,104 @@
+﻿@model CT.Models.Counter_Types
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Counter_Types</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fase.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fase.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modct.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modct.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Types_On.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Types_On.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_PERIOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_PERIOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_LENGTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_LENGTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_PREC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_PREC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_ELEMENTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_ELEMENTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_VOLTAGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_VOLTAGE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_CURRENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_CURRENT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

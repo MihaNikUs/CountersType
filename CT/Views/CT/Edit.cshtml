@@ -1,0 +1,125 @@
+﻿@model CT.Models.Counter_Types
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Counter_Types</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_NAME, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_NAME)
+                @Html.ValidationMessageFor(model => model.CT_NAME)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_PERIOD, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_PERIOD)
+                @Html.ValidationMessageFor(model => model.CT_PERIOD)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_LENGTH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_LENGTH)
+                @Html.ValidationMessageFor(model => model.CT_LENGTH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_PREC, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_PREC)
+                @Html.ValidationMessageFor(model => model.CT_PREC)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_ELEMENTS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_ELEMENTS)
+                @Html.ValidationMessageFor(model => model.CT_ELEMENTS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_VOLTAGE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_VOLTAGE)
+                @Html.ValidationMessageFor(model => model.CT_VOLTAGE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CT_CURRENT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CT_CURRENT)
+                @Html.ValidationMessageFor(model => model.CT_CURRENT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ModctId, "ModctId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ModctId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ModctId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FaseId, "FaseId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("FaseId", String.Empty)
+                @Html.ValidationMessageFor(model => model.FaseId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Types_OnId, "Types_OnId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Types_OnId", String.Empty)
+                @Html.ValidationMessageFor(model => model.Types_OnId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+
+    <form action="/profile/upload" method="post" enctype="multipart/form-data">
+
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo">
+
+        <input type="submit" value="Upload">
+    </form>
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
